@@ -1,0 +1,22 @@
+    "_id" : ObjectId("5a0b347b8297f14a3420bb9e"),
+    "phoneNumber" : "01009560620",
+    "password" : "hoss123",
+    "hashVal" : "1bu4i3iug262bi6u22j2ij3bug5ug45i",
+    "email" : "hossammohamedali29@gmail.com",
+    "verified" : "true",
+    "fullname" : "Hossam Mohamed",
+    "userType" : "buyer",
+    "carType" : "",
+    "carModel" : "",
+    "carYear" : "2017",
+    "favourites" : [ 
+        {
+            "orderID" : "5a0b7039054fbf0035720676",
+            "responses" : [ 
+                "01009560622", 
+                "01198765432"
+            ]
+        }
+    ],
+    "__v" : 10
+}

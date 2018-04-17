@@ -1,0 +1,560 @@
+<!DOCTYPE html>
+<html dir="ltr" lang="en-US">
+<head>
+<script  src="/__/firebase/4.5.0/firebase-app.js"></script>
+<script  src="/__/firebase/4.5.0/firebase-database.js"></script>
+<!-- include only the Firebase features as you need -->
+<script  src="/__/firebase/4.5.0/firebase-auth.js"></script>
+<!-- initialize the SDK after all desired features are loaded -->
+<script  src="/__/firebase/init.js"></script>
+
+<!-- Document Meta
+============================================= -->
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<!--IE Compatibility Meta-->
+<meta name="author" content="wplly" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+<meta name="description" content="DOD">
+<link href="assets/images/favicon.ico" rel="icon">
+
+
+<!-- Fonts
+============================================= -->
+<link href='https://fonts.googleapis.com/css?family=Montserrat:400,700%7CRaleway:100,200,300,400,500,600,700,800%7CDroid+Serif:400,400italic,700,700italic' rel='stylesheet' type='text/css'>
+
+<!-- Stylesheets
+============================================= -->
+<link href="assets/css/external.css" rel="stylesheet">
+<!-- Extrnal CSS -->
+<link href="assets/css/bootstrap.min.css" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-select/1.12.4/css/bootstrap-select.min.css">
+<!-- Boostrap Core CSS -->
+<link href="assets/css/style.css" rel="stylesheet">
+<link href="assets/css/dark.css" rel="stylesheet">
+<link rel="stylesheet" href="assets/css/jquery.tree-multiselect.min.css">
+<script src="https://cdn.firebase.com/libs/firebaseui/2.5.1/firebaseui.js"></script>
+<link type="text/css" rel="stylesheet" href="https://cdn.firebase.com/libs/firebaseui/2.5.1/firebaseui.css" />
+<!-- <link href="assets/css/custom.css" rel="stylesheet"> -->
+<!-- Style CSS -->
+
+
+
+<!-- HTML5 shim, for IE6-8 support of HTML5 elements. All other JS at the end of file. -->
+<!--[if lt IE 9]>
+      <script src="assets/js/html5shiv.js"></script>
+      <script src="assets/js/respond.min.js"></script>
+    <![endif]-->
+
+<!-- Document Title
+============================================= -->
+<title>Login ODO</title>
+</head>
+<body class="dark">
+<div class="preloader">
+	<div class="spinner">
+		<img src="assets/images/logo.png" width="90" alt=""/>
+		<div class="bounce1">
+		</div>
+		<div class="bounce2">
+		</div>
+		<div class="bounce3">
+		</div>
+	</div>
+</div>
+<header id="navbar-spy" class="transparent-header">
+	<nav id="primary-menu" class="navbar navbar-fixed-top style-1">
+		<div class="container">
+			<!-- Brand and toggle get grouped for better mobile display -->
+			<div class="navbar-header">
+				<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+				<span class="sr-only">Toggle navigation</span>
+				<span class="icon-bar"></span>
+				<span class="icon-bar"></span>
+				<span class="icon-bar"></span>
+				</button>
+				<a class="logo" href="index.html">
+					<img src="assets/images/logo.png" width="90" alt=""/>
+				</a>
+			</div>
+
+			<!-- Collect the nav links, forms, and other content for toggling -->
+			<div class="collapse navbar-collapse pull-right" id="bs-example-navbar-collapse-1">
+				<ul class="nav navbar-nav navbar-left">
+					<li class="active">
+
+						<a href="index.html">Home</a>
+
+					</li>
+
+
+					<!-- li end -->
+					<li>
+						<a style="display:none" href="myrequests.html">My Requests</a>
+					</li>
+
+					<li id="buyer-home" style="display:none">
+						<a href="buyer-home.html">Request</a>
+					</li>
+
+					<li id="seller-home" style="display:none" class="has-dropdown pull-left">
+						<a href="#" data-toggle="dropdown" class="dropdown-toggle">Requests</a>
+						<ul class="dropdown-menu">
+							<li>
+								<a href="spare-parts-requests.html">Spare Parts R.</a>
+							</li>
+							<li>
+								<a href="tyres-requests.html">Tyres & Batteries R.</a>
+							</li>
+							<li>
+								<a href="accessories-requests.html">Accessories R.</a>
+							</li>
+						</ul>
+					</li>
+
+
+
+
+					<!-- li end -->
+
+				</ul>
+				<!-- Mod-->
+				<div class="module module-search pull-left">
+					<div class="search-icon">
+						<i class="fa fa-search"></i>
+						<span class="title">search</span>
+					</div>
+					<div class="search-box">
+						<form class="search-form">
+							<div class="input-group">
+								<input type="text" class="form-control" placeholder="Type Your Search Words">
+								<span class="input-group-btn">
+								<button class="btn" type="button"><i class="fa fa-search"></i></button>
+								</span>
+							</div>
+							<!-- /input-group -->
+						</form>
+					</div>
+				</div>
+				<!-- .module-search-->
+
+
+			</div>
+			<!-- /.navbar-collapse -->
+		</div>
+		<!-- /.container-fluid -->
+	</nav>
+</header>
+
+<!-- Page Title
+============================================= -->
+<section class=" bg-overlay bg-overlay-gradient pb-0">
+	<div class="bg-section" >
+		<img src="assets/images/Mercedes-Benz-Services-MBI-Motors-Header.jpg" alt="Background"/>
+	</div>
+	<div class="container">
+		<div id="firebaseui-auth-container"></div>
+		<div class="row">
+			<div class="col-xs-12 col-sm-12 col-md-12">
+				<div class="page-title title-1 text-center">
+					<div class="title-bg">
+						<h2>Login & Register</h2>
+					</div>
+
+				</div>
+				<!-- .page-title end -->
+			</div>
+			<!-- .col-md-12 end -->
+		</div>
+		<!-- .row end -->
+	</div>
+	<!-- .container end -->
+</section>
+<!-- Contact #1
+============================================= -->
+<section id="contact" class="contact">
+	<div class="container">
+		<div class="row">
+
+			<!-- .col-md-12 end -->
+			<div class="col-xs-12 col-sm-12 col-md-12">
+				<div class="row">
+
+					<!-- .col-md-4 end -->
+					<div class="col-xs-12 col-sm-12 col-md-4">
+						<div class="heading heading-4">
+							<div class="heading-bg heading-right">
+								<p class="mb-0">your home of cars</p>
+								<h2>login</h2>
+							</div>
+						</div>
+						<div class="row">
+							<form id="contact-form-signin" action="#">
+								<div class="col-md-12">
+									<input type="number" class="form-control mb-30" name="contact-number" id="mob_num" min ='0' placeholder="Mobile Number *" required/>
+								</div>
+								<div class="col-md-12">
+									<input type="password" class="form-control mb-30" name="pw-new" id="signin-pw" placeholder="Password *" required/>
+								</div>
+								<div class="col-md-12">
+									<button type="Submit" id="signin-button" class="btn btn-primary btn-black btn-block full">Sign in</button>
+								</div>
+								<div class="col-xs-12 col-sm-12 col-md-12 mt-xs">
+									<!--Alert Message-->
+									<div id="contact-result">
+									</div>
+								</div>
+							</form>
+						</div>
+					</div>
+					<!-- .col-md-8 end -->
+					<!-- .col-md-4 end -->
+					<div class="col-xs-12 col-sm-12 col-md-6 col-md-offset-2">
+						<div class="heading heading-4">
+							<div class="heading-bg heading-right">
+								<p class="mb-0">your home of cars</p>
+								<h2>Register</h2>
+							</div>
+						</div>
+						<ul  class="nav-pills row">
+							<li class="active col-md-6">
+				        		<a href="#1a" data-toggle="tab">Buyer</a>
+							</li>
+							<li class="col-md-6">
+								<a href="#2a" data-toggle="tab">Company</a>
+							</li>
+
+						</ul>
+							<div class="tab-content clearfix">
+			  	<div class="tab-pane active" id="1a">
+		          	<div class="row">
+							<form id="register-buyer-form" action="#">
+								<div class="col-md-12">
+									<input type="name" class="form-control mb-30" name="first-name" id="fname-buyer" placeholder="Full Name *" required/>
+								</div>
+								<div class="col-md-12">
+									<input type="number" class="form-control mb-30" name="phone-number" id="phonenum-buyer" placeholder="Mobile Number *" required/>
+								</div>
+								<div class="col-md-12">
+									<input type="email" class="form-control mb-30" name="new-email" id="buyer_email" placeholder="Your Email"/>
+								</div>
+
+								<div class="col-md-6">
+									<input type="password" class="form-control mb-30" name="pw-new" id="password-new" placeholder="Password *" required/>
+								</div>
+								<div class="col-md-6">
+									<input type="password" class="form-control mb-30" name="pw-repeat-new" id="password-repeat-buyer" placeholder="Re-enter password *" required/>
+								</div>
+
+								<div class="col-md-12">
+									<button type="submit" id="register-buyer-button" class="btn btn-primary btn-black btn-block full">Register an account</button>
+								</div>
+								<div class="col-xs-12 col-sm-12 col-md-12 mt-xs">
+									<!--Alert Message-->
+									<div id="contact-result">
+									</div>
+								</div>
+							</form>
+							<form id="verify-code-buyer-form" action="#" hidden>
+								<div class="col-md-12">
+									<input type="number" class="form-control mb-30" name="verify-code" id="verify-code-buyer" min ='0' placeholder="Verification Code" required/>
+								</div>
+								<div class="col-md-6">
+									<button  class="btn btn-primary btn-black btn-block cancel-button">Cancel</button>
+								</div>
+								<div class="col-md-6">
+									<button disabled id="verify-button-buyer" class="btn btn-primary btn-black btn-block">Verify</button>
+								</div>
+								<div class="col-xs-12 col-sm-12 col-md-12 mt-xs">
+									<!--Alert Message-->
+									<div id="contact-result">
+									</div>
+								</div>
+							</form>
+						</div>
+				</div>
+						<div class="tab-pane" id="2a">
+		          <div class="row">
+							<form id="register-seller-form" action="#">
+								<div class="col-md-12">
+									<input type="text" class="form-control mb-30" name="first-name" id="fname-seller" placeholder="Full Name *" required/>
+								</div>
+								<div class="col-md-12">
+									<input type="number" class="form-control mb-30" name="phone-name" id="phonenum-seller" placeholder="Mobile Number *" required/>
+								</div>
+								<div class="col-md-12">
+									<input type="email" class="form-control mb-30" name="new-email" id="n_email" placeholder="Your Email"/>
+								</div>
+								<div class="col-md-6">
+									<input type="text" class="form-control mb-30" name="last-name" id="com_name" placeholder="Company Name *" required/>
+								</div>
+								<div class="col-md-6">
+									<input type="text" class="form-control mb-30" name="last-name" id="com_add" placeholder="Company Address *" required/>
+								</div>
+
+								<div class="col-md-6">
+									<select name="speciallity" id="area" class="form-control mb-30 selectpicker" data-live-search="true" title="Area *">
+									</select>
+								</div>
+								<div class="col-md-6">
+									<select name="speciallity" id="speciality" class="form-control mb-30 selectpicker" title="Please select speciality *">
+									  <option value="Spare-Parts" selected>Spare Parts</option>
+									  <option value="Accessories">Accessories</option>
+									  <option value="Tyres">Tyres and batteries</option>
+									</select>
+								</div>
+								<div class="col-md-12">
+									<!-- <button type="button" onclick="showPosition();">Show My Position on Google Map</button> -->
+									<div id="embedMap" onload="showPosition()"></div>
+								</div>
+
+								<div class="col-md-12">
+									<!-- <select name="speciallity" id="working-on" class="form-control mb-30">
+									  <option value="" selected disabled>Working on *</option>
+									  <option value="OPEL">OPEL</option>
+									  <option value="MERCEDES">MERCEDES</option>
+									  <option value="ASTRA">ASTRA</option>
+									  <option value="BMW">BMW</option>
+
+									</select> -->
+									<div class="row" id="add-car">
+										<div class="col-md-4">
+											<select class="selectpicker form-control mb-30" id="car-type"  data-live-search="true" title="Car brand *"></select>
+										</div>
+										<div class="col-md-3" id="car-model-div" hidden>
+											<select class="selectpicker form-control mb-30" id="car-model"  data-live-search="true" title="Car model *" ></select>
+										</div>
+										<div class="col-md-3" id="car-year-div" hidden>
+											<select class="selectpicker form-control mb-30" id="car-year"  multiple data-live-search="true" title="Car year *" ></select>
+										</div>
+										<div class="col-md-2" id="add_car-div" hidden>
+											<button type="button" id="add_car" class="btn btn-primary btn-black btn-block" aria-label="Close">
+												<span class="glyphicon glyphicon-plus"></span></button>
+										</div>
+									</div>
+								</div>
+
+								<div class="col-md-12">
+								<!-- <select  name="select1" id="select1" class="form-control">
+										<option value="">working on *</option>
+										<option value="Mercedes">Mercedes</option>
+										<option value="opel">Opel</option>
+								</select> -->
+								<p class="mb-20">Choose you Car's Type</p>
+
+								<select id="test-select" multiple="multiple">
+
+
+										<option value="BMW 1991" data-section="Car Type/BMW">1991</option>
+										<option value="BMW 1992" data-section="Car Type/BMW">1992</option>
+
+										<option value="Mercedes c180 1995" data-section="Car Type/Mercedes/c180">1995</option>
+										<option value="Mercedes c180 1995" data-section="Car Type/Mercedes/c180">1995</option>
+										<option value="Mercedes 1995" data-section="Car Type/Mercedes/c180">1995</option>
+										<option value="Mercedes 1994" data-section="Car Type/Mercedes">1994</option>
+										<option value="Mercedes 1995" data-section="Car Type/Mercedes">1995</option>
+
+										<option value="milk tea" data-section="Car Type/Mazda">1996</option>
+										<option value="green apple" data-section="Car Type/Mazda">1997</option>
+										<option value="green apple" data-section="Car Type/Mazda">1998</option>
+
+										<option value="milk tea" data-section="Car Type/Golf">1991</option>
+										<option value="green apple" data-section="Car Type/Golf">1992</option>
+
+										<option value="milk tea" data-section="Car Type/Toyota">1991</option>
+										<option value="green apple" data-section="Car Type/Toyota">1992</option>
+
+
+									</select>
+
+							</div>
+
+
+								<div class="col-md-6">
+									<input type="password" class="form-control mb-30" name="pw-new" id="password_new" placeholder="Password *" required/>
+								</div>
+								<div class="col-md-6">
+									<input type="password" class="form-control mb-30" name="pw-repeat-new" id="password-repeat-seller" placeholder="Re-enter password *" required/>
+								</div>
+								<div class="col-md-12">
+									<button type="submit" id="register-seller-button" class="btn btn-primary btn-black btn-block full">Register an account</button>
+								</div>
+								<div class="col-xs-12 col-sm-12 col-md-12 mt-xs">
+									<!--Alert Message-->
+									<div id="contact-result">
+									</div>
+								</div>
+							</form>
+							<form id="verify-code-seller-form" action="#" hidden>
+								<div class="col-md-12">
+									<input type="number" class="form-control mb-30" name="verify-code" id="verify-code-seller" min ='0' placeholder="Verification Code" required/>
+								</div>
+								<div class="col-md-6">
+									<button  class="btn btn-primary btn-black btn-block cancel-button">Cancel</button>
+								</div>
+								<div class="col-md-6">
+									<button disabled id="verify-button-seller" class="btn btn-primary btn-black btn-block">Verify</button>
+								</div>
+								<div class="col-xs-12 col-sm-12 col-md-12 mt-xs">
+									<!--Alert Message-->
+									<div id="contact-result">
+									</div>
+								</div>
+							</form>
+						</div>
+						</div>
+
+
+
+					</div>
+					<!-- .col-md-8 end -->
+				</div>
+				<!-- .row end -->
+			</div>
+			<!-- .col-md-12 end -->
+		</div>
+		<!-- .row end -->
+
+	</div>
+	<!-- .container end -->
+</section>
+
+
+
+<footer id="footer" class="footer-1">
+	<!-- Contact Bar
+	============================================= -->
+	<div class="container footer-widgtes">
+		<div class="row">
+			<div class="col-xs-12 col-sm-12 col-md-12">
+				<div class="widgets-contact">
+					<div class="row">
+						<div class="col-xs-12 col-sm-12 col-md-6 widget">
+							<div class="widget-contact-icon pull-left">
+								<i class="lnr lnr-map"></i>
+							</div>
+							<div class="widget-contact-info">
+								<p class="text-capitalize text-white">visit us</p>
+								<p class="text-capitalize font-heading">Mohandsen , Cairo, Egypt.</p>
+							</div>
+						</div>
+						<!-- .widget end -->
+						<div class="col-xs-12 col-sm-12 col-md-6 widget">
+							<div class="widget-contact-icon pull-left">
+								<i class="lnr lnr-envelope"></i>
+							</div>
+							<div class="widget-contact-info">
+								<p class="text-capitalize text-white">email us</p>
+								<p class="text-capitalize font-heading">info@odo.com</p>
+							</div>
+						</div>
+						<!-- .widget end -->
+
+						<!-- .widget end -->
+					</div>
+					<!-- .row end -->
+				</div>
+				<!-- .widget-contact end -->
+			</div>
+			<!-- .col-md-12 end -->
+		</div>
+		<!-- .row end -->
+	</div>
+	<!-- .container end -->
+
+
+
+
+	<!-- Copyrights
+	============================================= -->
+	<div class="container">
+		<div class="row">
+			<div class="col-xs-12 col-sm-12 col-md-12 copyrights text-center">
+				<p class="text-capitalize">© 2017 ODO. all rights reserved</p>
+				<p class="text-capitalize">With Love by
+					<a href="#">Inspira-eg.com</a>
+				</p>
+			</div>
+		</div>
+	</div>
+</footer>
+
+<!-- Footer Scripts
+============================================= -->
+<script src="assets/js/jquery-2.1.1.min.js"></script>
+<script src="assets/js/plugins.js?v=1.0.0"></script>
+<script src="assets/js/functions.js?v=1.2.0"></script>
+<script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDt_PRbn0_zAv37jCizZaYVPKhrn77paV0"
+  type="text/javascript"></script>
+<script type="text/javascript" src="assets/js/jquery.gmap.min.js"></script>
+<script type="text/javascript" src="assets/js/SHA-256.js"></script>
+<script type="text/javascript" src="assets/js/firebaseDB.js"></script>
+<script type="text/javascript" src="assets/js/sign-in.js"></script>
+
+<script src="assets/js/jquery.tree-multiselect.min.js"></script>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-select/1.12.4/js/bootstrap-select.min.js"></script>
+
+<script>
+
+var tree1 = $("#test-select").treeMultiselect({ enableSelectAll: true, sortable: true });
+
+$("#select1").change(function() {
+  if ($(this).data('options') == undefined) {
+    $(this).data('options', $('#select2 option').clone());
+  }
+  var id = $(this).val();
+  var options = $(this).data('options').filter('[data-value=' + id + ']');
+  $('#select2').html(options).show();
+});
+jQuery('#register-seller-form #com_add').one('focus', function()
+    {
+         showPosition();
+         jQuery("#embedMap").addClass("active");
+				 jQuery(".div-map").addClass("active");
+    });
+
+        function showPosition(){
+            if(navigator.geolocation){
+                navigator.geolocation.getCurrentPosition(showMap, showError);
+            } else{
+                alert("Sorry, your browser does not support HTML5 geolocation.");
+            }
+        }
+
+        // Define callback function for successful attempt
+        function showMap(position){
+            // Get location data
+            window.lat = position.coords.latitude;
+            window.long = position.coords.longitude;
+            var latlong = new google.maps.LatLng(lat, long);
+
+            var myOptions = {
+                center: latlong,
+                zoom: 16,
+                mapTypeControl: true,
+                navigationControlOptions: {style:google.maps.NavigationControlStyle.SMALL}
+            }
+
+            var map = new google.maps.Map(document.getElementById("embedMap"), myOptions);
+            var marker = new google.maps.Marker({position:latlong, map:map, draggable:true, title:"You are here!"});
+        }
+
+        // Define callback function for failed attempt
+        function showError(error){
+            if(error.code == 1){
+                result.innerHTML = "You've decided not to share your position, but it's OK. We won't ask you again.";
+            } else if(error.code == 2){
+                result.innerHTML = "The network is down or the positioning service can't be reached.";
+            } else if(error.code == 3){
+                result.innerHTML = "The attempt timed out before it could get the location data.";
+            } else{
+                result.innerHTML = "Geolocation failed due to unknown error.";
+            }
+        }
+
+
+</script>
+
+</body>
+</html>

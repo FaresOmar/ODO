@@ -1,0 +1,60 @@
+{
+    "_id" : ObjectId("5a0b34988297f14a3420bba0"),
+    "phoneNumber" : "01009560622",
+    "password" : "hoss123",
+    "hashVal" : "1bu4i3iug262bi6u22j2ij3bug5ug45i",
+    "email" : "hossammohamedali2900@gmail.com",
+    "verified" : "true",
+    "fullname" : "Hossam Mohamed",
+    "userType" : "seller",
+    "sellerConfirmed" : "false",
+    "companyName" : "IBM",
+    "companyAddress" : "Smart Village",
+    "companyType" : "spareParts",
+    "favourites" : [ 
+        "5a0b7407bac2d1003e443e0f"
+    ],
+    "workingOn" : [ 
+        {
+            "carModels" : [ 
+                {
+                    "years" : [ 
+                        "2016", 
+                        "2017"
+                    ],
+                    "model" : "INSIGNIA"
+                }
+            ],
+            "carType" : "OPEL"
+        }, 
+        {
+            "carModels" : [ 
+                {
+                    "years" : [ 
+                        "2015", 
+                        "2017"
+                    ],
+                    "model" : "x5"
+                }
+            ],
+            "carType" : "BMW"
+        }, 
+        {
+            "carModels" : [ 
+                {
+                    "years" : [ 
+                        "2006", 
+                        "2009"
+                    ],
+                    "model" : "c150"
+                }
+            ],
+            "carType" : "Mercedes"
+        }
+    ],
+    "companyOnMap" : {
+        "longitude" : "2342342344234234",
+        "latitude" : "234343243242424"
+    },
+    "__v" : 1
+}

@@ -1,0 +1,368 @@
+<!DOCTYPE html>
+<html dir="ltr" lang="en-US">
+<head>
+<!-- Document Meta
+============================================= -->
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<!--IE Compatibility Meta-->
+<meta name="author" content="wplly" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+<meta name="description" content="Cars">
+<link href="assets/images/favicon.ico" rel="icon">
+
+
+<!-- Fonts
+============================================= -->
+<link href='https://fonts.googleapis.com/css?family=Montserrat:400,700%7CRaleway:100,200,300,400,500,600,700,800%7CDroid+Serif:400,400italic,700,700italic' rel='stylesheet' type='text/css'>
+
+<!-- Stylesheets
+============================================= -->
+<link href="assets/css/external.css" rel="stylesheet">
+
+<!-- Extrnal CSS -->
+<link href="assets/css/bootstrap.min.css" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-select/1.12.4/css/bootstrap-select.min.css">
+<!-- Boostrap Core CSS -->
+<link href="assets/css/style.css" rel="stylesheet">
+<link href="assets/css/dark.css" rel="stylesheet">
+
+<script  src="/__/firebase/4.5.0/firebase-app.js"></script>
+<script  src="/__/firebase/4.5.0/firebase-database.js"></script>
+<script  src="/__/firebase/4.5.0/firebase-storage.js"></script>
+<!-- include only the Firebase features as you need -->
+<script  src="/__/firebase/4.5.0/firebase-auth.js"></script>
+<!-- initialize the SDK after all desired features are loaded -->
+<script  src="/__/firebase/init.js"></script>
+
+
+<!-- Style CSS -->
+
+<!-- HTML5 shim, for IE6-8 support of HTML5 elements. All other JS at the end of file. -->
+<!--[if lt IE 9]>
+      <script src="assets/js/html5shiv.js"></script>
+      <script src="assets/js/respond.min.js"></script>
+    <![endif]-->
+
+<!-- Document Title
+============================================= -->
+<title>Request - ODO</title>
+</head>
+<body class="dark">
+<div class="preloader">
+	<div class="spinner">
+		<img src="assets/images/logo.png" width="90" alt=""/>
+		<div class="bounce1">
+		</div>
+		<div class="bounce2">
+		</div>
+		<div class="bounce3">
+		</div>
+	</div>
+</div>
+<header id="navbar-spy" class="transparent-header">
+
+</header>
+
+<!-- Page Title
+============================================= -->
+<section class=" bg-overlay bg-overlay-gradient pb-0">
+	<div class="bg-section" >
+		<img src="assets/images/bmw_3-wallpaper-960x540.jpg" alt="Background"/>
+	</div>
+	<div class="container">
+		<div class="row">
+			<div class="col-xs-12 col-sm-12 col-md-12">
+				<div class="page-title title-1 text-center">
+					<div class="title-bg">
+						<h2>Request</h2>
+					</div>
+
+				</div>
+				<!-- .page-title end -->
+			</div>
+			<!-- .col-md-12 end -->
+		</div>
+		<!-- .row end -->
+	</div>
+	<!-- .container end -->
+</section>
+
+<!-- Contact #1
+============================================= -->
+<section id="contact" class="contact">
+	<div class="container">
+		<div class="row">
+
+			<!-- .col-md-12 end -->
+			<div class="col-xs-12 col-sm-12 col-md-12">
+				<div class="row">
+
+					<!-- .col-md-4 end -->
+					<div class="col-xs-12 col-sm-12 col-md-12">
+						<div class="heading heading-4">
+							<div class="heading-bg heading-right">
+								<p class="mb-0">let us know more about your request</p>
+								<h2>Request</h2>
+							</div>
+						</div>
+						<div class="row">
+							<form id="contact-form" class="row" action="#">
+								<div class="col-md-5">
+									<div class="col-md-12">
+										<select name="car-type" id="car-type" class="form-control mb-30 selectpicker" title="Your Car type" required>
+
+										</select>
+									</div>
+									<div class="col-md-12">
+										<select name="car-model" id="car-model" class="form-control mb-30 selectpicker" title="Your Car Model" required>
+										</select>
+									</div>
+
+									<div class="col-md-12">
+										<select name="car-year" id="car-year" class="form-control mb-30 selectpicker" title="Your Car Year" required>
+										</select>
+									</div>
+									<div class="col-md-12">
+										<input type="number" class="form-control mb-30" name="engine-capacity" id="engine_capacity" placeholder="Engine Capacity  (ex: 1600cc)" required/>
+									</div>
+									<div class="col-md-12">
+										<input type="text" class="form-control mb-30" name="part-color" id="part_color" placeholder="Color  (ex: white)" required/>
+									</div>
+
+									<div class="col-md-12">
+										<select name="typeselect" class="form-control mb-30 selectpicker" id="typeselect" title="Type of Request" required>
+
+										  <option value="Spare_Parts">Spare Parts</option>
+										  <option value="batteries">Batteries</option>
+										  <option value="tyres">Tyres</option>
+										  <option value="accessories">accessories</option>
+										</select>
+									</div>
+
+
+									<div class="col-xs-12 col-sm-12 col-md-12 mt-xs">
+										<!--Alert Message-->
+										<div id="contact-result">
+										</div>
+									</div>
+
+
+								</div>
+								<!-- end of col-md-5 ( first section of select) -->
+								<div class="col-md-6">
+									<div class="spare-part-div hidden-div row">
+										<!-- <div class="col-md-12">
+											<p class="mb-30">Adding part details</p>
+										</div> -->
+										<div id="spare-part-single1">
+											<div class="col-md-6">
+
+												<img id="preview-img" class="preview-img"  />
+												<input type='file' id="imgInp1" class="hidden" multiple accept="image/x-png,image/gif,image/jpeg"/>
+												<label class="btn btn-secondary file-upload col-md-12" for="imgInp1">Add Photos <i class="fa fa-plus"></i></label>
+
+											</div>
+											<div class="col-md-6">
+												<input type="text" class="form-control mb-30" name="part" id="part" placeholder="Part  (ex: Break bad)" required/>
+											</div>
+										</div>
+										<div class="col-md-6 mb-30 add-part-div">
+											<a class="add-part">Add another part details <i class="fa fa-plus"></i></a>
+										</div>
+
+
+									</div>
+
+									<div class="batteries-div hidden-div">
+
+										<div class="col-md-12 mb-30">
+										<input type="radio" name="battery-info" id="dntknow_battery" class="css-checkbox" checked="checked" value="dntknow_battery">
+										<label for="dntknow_battery" class="css-label cb18 radGroup2">I don't Know my battery</label></br>
+
+										<input type="radio" name="battery-info" id="know_battery" class="css-checkbox" value="know_battery">
+										<label for="know_battery" class="css-label cb18 radGroup2">I know My battery</label>
+
+
+										</div>
+										<div class="hidden-div know-battery-div">
+											<div class="col-md-6">
+												<select name="speciallity" class="form-control mb-30 selectpicker" id="size-select" title="Size">
+												</select>
+
+												<div class="checkboxThree">
+											      <input type="checkbox" value="1" id="Reversed" />
+											      <label for="Reversed"></label>
+											      <p>Reversed</p>
+											    </div>
+
+											</div>
+
+											<div class="col-md-6 mb-30">
+												<input type="radio" name="battery-poles" id="large_poles" class="css-checkbox" checked="checked" value="large poles">
+												<label for="large_poles" class="css-label cb18 radGroup2">large poles</label></br>
+
+												<input type="radio" name="battery-poles" id="small_poles" class="css-checkbox" value="small poles">
+												<label for="small_poles" class="css-label cb18 radGroup2">small poles</label><br>
+
+											</div>
+										</div>
+
+									</div>
+
+									<div class="tyres-div hidden-div">
+										<!-- <div class="col-md-12">
+											<p class="mb-30">Make a Tyre request</p>
+										</div> -->
+										<div class="col-md-6">
+											<select name="tyre-size" class="form-control mb-30 selectpicker" title="Size">
+											  <option value="15" selected>15</option>
+											  <option value="17">17</option>
+											  <option value="19">19</option>
+											</select>
+										</div>
+										<div class="col-md-6">
+											<select name="tyre-flat" class="form-control mb-30 selectpicker" title="Quantity">
+											  <option value="1tyre" selected>1 Tyre</option>
+											  <option value="2tyres">2 Tyres</option>
+											  <option value="4tyres">4 Tyres</option>
+											</select>
+										</div>
+										<div class="col-md-6">
+											<div class="checkboxThree">
+											      <input type="checkbox" value="1" id="run_flat" />
+											      <label for="run_flat"></label>
+											      <p>Run flat Tyres</p>
+											    </div>
+										</div>
+
+
+									</div>
+
+									<div class="accessories-div hidden-div">
+										<!-- <div class="col-md-12">
+											<p class="mb-30">Adding accessory part details</p>
+										</div> -->
+										<div id="accessory-part-single1">
+											<div class="col-md-6 mb-30">
+
+												<img id="preview-img_access" class="preview-img" />
+												<input type='file' id="imgInp_access1" class="hidden" multiple accept="image/x-png,image/gif,image/jpeg"/>
+												<label class="btn btn-secondary file-upload col-md-12" for="imgInp_access1">Add Photos <i class="fa fa-plus"></i></label>
+
+											</div>
+
+											<div class="col-md-6">
+												<input type="text" class="form-control mb-30" name="part-item" id="part-item" placeholder="Part" required/>
+											</div>
+										</div>
+										<div class="col-md-6 mb-30 add-part-div">
+											<a class="add-accessory">Add another Accessory <i class="fa fa-plus"></i></a>
+										</div>
+
+									</div>
+
+									<div class="col-md-12 hidden-div submit-btn">
+										<button type="submit" id="submit-message" class="btn btn-primary btn-black btn-block">Submit Request</button>
+									</div>
+								</div>
+
+							</form>
+						</div>
+					</div>
+					<!-- .col-md-8 end -->
+					<!-- .col-md-4 end -->
+
+			<!-- .col-md-12 end -->
+		</div>
+		<!-- .row end -->
+
+	</div>
+	<!-- .container end -->
+</section>
+
+
+
+
+
+<footer id="footer" class="footer-1">
+	<!-- Contact Bar
+	============================================= -->
+	<div class="container footer-widgtes">
+		<div class="row">
+			<div class="col-xs-12 col-sm-12 col-md-12">
+				<div class="widgets-contact">
+					<div class="row">
+						<div class="col-xs-12 col-sm-12 col-md-6 widget">
+							<div class="widget-contact-icon pull-left">
+								<i class="lnr lnr-map"></i>
+							</div>
+							<div class="widget-contact-info">
+								<p class="text-capitalize text-white">visit us</p>
+								<p class="text-capitalize font-heading">Mohandsen , Cairo, Egypt.</p>
+							</div>
+						</div>
+						<!-- .widget end -->
+						<div class="col-xs-12 col-sm-12 col-md-6 widget">
+							<div class="widget-contact-icon pull-left">
+								<i class="lnr lnr-envelope"></i>
+							</div>
+							<div class="widget-contact-info">
+								<p class="text-capitalize text-white">email us</p>
+								<p class="text-capitalize font-heading">info@odo.com</p>
+							</div>
+						</div>
+						<!-- .widget end -->
+
+						<!-- .widget end -->
+					</div>
+					<!-- .row end -->
+				</div>
+				<!-- .widget-contact end -->
+			</div>
+			<!-- .col-md-12 end -->
+		</div>
+		<!-- .row end -->
+	</div>
+	<!-- .container end -->
+
+	<!-- Widget Section
+	============================================= -->
+
+
+	<!-- Copyrights
+	============================================= -->
+	<div class="container">
+		<div class="row">
+			<div class="col-xs-12 col-sm-12 col-md-12 copyrights text-center">
+				<p class="text-capitalize">© 2017 ODO. all rights reserved</p>
+				<p class="text-capitalize">With Love by
+					<a href="#">Inspira-eg.com</a>
+				</p>
+			</div>
+		</div>
+	</div>
+</footer>
+
+<!-- Footer Scripts
+============================================= -->
+<script src="assets/js/jquery-2.1.1.min.js"></script>
+<script src="assets/js/plugins.js?v=1.0.0"></script>
+<script src="assets/js/functions.js?v=1.2.0"></script>
+<script type="text/javascript" src="https://maps.google.com/maps/api/js?sensor=true"></script>
+<script type="text/javascript" src="assets/js/jquery.gmap.min.js"></script>
+<!-- Latest compiled and minified JavaScript -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-select/1.12.4/js/bootstrap-select.min.js"></script>
+<script type="text/javascript" src="assets/js/firebaseDB.js"></script>
+<script type="text/javascript" src="assets/js/buyer-home.js"></script>
+
+<script>
+$.get( "header.html", function( data ) {
+  $( "#navbar-spy" ).html( data );
+	adjustHeader();
+});
+
+</script>
+
+</body>
+</html>

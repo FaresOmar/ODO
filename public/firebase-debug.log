@@ -1,0 +1,41 @@
+[debug] [2018-02-05T20:11:22.632Z] ----------------------------------------------------------------------
+[debug] [2018-02-05T20:11:22.635Z] Command:       C:\Program Files\nodejs\node.exe C:\Users\Fares Omar\AppData\Roaming\npm\node_modules\firebase-tools\bin\firebase serve
+[debug] [2018-02-05T20:11:22.636Z] CLI Version:   3.17.4
+[debug] [2018-02-05T20:11:22.636Z] Platform:      win32
+[debug] [2018-02-05T20:11:22.636Z] Node Version:  v8.9.4
+[debug] [2018-02-05T20:11:22.636Z] Time:          Mon Feb 05 2018 22:11:22 GMT+0200 (Egypt Standard Time)
+[debug] [2018-02-05T20:11:22.636Z] ----------------------------------------------------------------------
+[debug] 
+[debug] [2018-02-05T20:11:22.650Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2018-02-05T20:11:22.651Z] > authorizing via signed-in user
+[debug] [2018-02-05T20:11:22.653Z] > refreshing access token with scopes: ["email","https://www.googleapis.com/auth/cloud-platform","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","openid"]
+[debug] [2018-02-05T20:11:22.653Z] >>> HTTP REQUEST POST https://www.googleapis.com/oauth2/v3/token  
+ { refresh_token: '1/p5aD3BY6fWCQDmkoFoRl1tO1e7u7zRt67fajOgacbZAUKVDzqM65NBYIcOvozZp-',
+  client_id: '563584335869-fgrhgmd47bqnekij5i8b5pr03ho849e6.apps.googleusercontent.com',
+  client_secret: 'j9iVZfS8kkCEFUPaAeJV0sAi',
+  grant_type: 'refresh_token',
+  scope: 'email https://www.googleapis.com/auth/cloud-platform https://www.googleapis.com/auth/cloudplatformprojects.readonly https://www.googleapis.com/auth/firebase openid' } 
+ Mon Feb 05 2018 22:11:22 GMT+0200 (Egypt Standard Time)
+[debug] [2018-02-05T20:11:23.136Z] <<< HTTP RESPONSE 200
+[debug] [2018-02-05T20:11:23.141Z] >>> HTTP REQUEST GET https://admin.firebase.com/v1/projects/odo-960fa  
+  
+ Mon Feb 05 2018 22:11:23 GMT+0200 (Egypt Standard Time)
+[debug] [2018-02-05T20:11:24.191Z] <<< HTTP RESPONSE 200
+[debug] [2018-02-05T20:11:24.192Z] >>> HTTP REQUEST GET https://admin.firebase.com/v1/database/odo-960fa/tokens  
+  
+ Mon Feb 05 2018 22:11:24 GMT+0200 (Egypt Standard Time)
+[debug] [2018-02-05T20:11:24.959Z] <<< HTTP RESPONSE 200
+[info] 
+[info] === Serving from 'D:\Projects\Hossan\Project'...
+[info] 
+[debug] [2018-02-05T20:11:24.962Z] >>> HTTP REQUEST GET https://cloudresourcemanager.googleapis.com/v1/projects/odo-960fa  
+  
+ Mon Feb 05 2018 22:11:24 GMT+0200 (Egypt Standard Time)
+[debug] [2018-02-05T20:11:26.770Z] <<< HTTP RESPONSE 200
+[debug] [2018-02-05T20:11:26.770Z] >>> HTTP REQUEST GET https://mobilesdk-pa.googleapis.com/v1/projects/712660736210/clients/_:getWebAppConfig  
+  
+ Mon Feb 05 2018 22:11:26 GMT+0200 (Egypt Standard Time)
+[debug] [2018-02-05T20:11:27.620Z] <<< HTTP RESPONSE 200
+[info] i  hosting: Serving hosting files from: public
+[info] +  hosting: Local server: http://localhost:5000
+

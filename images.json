@@ -1,0 +1,14 @@
+
+    "_id" : ObjectId("5a0b3e17bb1ac029380764e7"),
+    "imageDetails" : {
+        "fieldname" : "photos",
+        "originalname" : "client-logo-section-1.jpg",
+        "encoding" : "7bit",
+        "mimetype" : "image/jpeg",
+        "destination" : "uploads/",
+        "filename" : "8ae28138c21483cbd52f4322a86e2ba9",
+        "path" : "uploads\\8ae28138c21483cbd52f4322a86e2ba9",
+        "size" : 154280
+    },
+    "__v" : 0
+}

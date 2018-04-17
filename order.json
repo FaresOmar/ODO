@@ -1,0 +1,327 @@
+
+{
+    "_id" : ObjectId("5a0b7039054fbf0035720676"),
+    "buyerPhoneNumber" : "01009560620",
+    "orderPartType" : "spareParts",
+    "orderImages" : [],
+    "carDetails" : {
+        "carType" : "OPEL",
+        "carModel" : "INSIGNIA",
+        "carYear" : "2017"
+    },
+
+"orderList" : [ 
+    {
+         "partType" : "spareParts",
+         "part" : "Motor", 
+         "engineCapacity" : "20",
+         "color" : "red" ,
+         "responses" : [ 
+            {
+                "sellerData" : {
+                    "sellerPhoneNumber" : "01009560622",
+                    "companyName" : "IBM",
+                    "companyAddress" : "Smart Village",
+					"companyArea" : "Cairo",
+                    "companyOnMap" : {
+                        "latitude" : "234343243242424",
+                        "longitude" : "2342342344234234"
+                    }
+                },
+                "responseData" : [{
+                    "price" : "200",
+                    "description" : "OEM",
+                    "resDate" : "2017-11-25T12:30:58.659Z",
+                    "images" : [
+                    { "id" : "53242515123", "originalName" : "cats.jpeg" }, 
+                    { "id" : "57830483487", "originalName" : "dogs.jpeg" }
+                    ]
+                },
+                {
+                    "price" : "150",
+                    "description" : "FFM",
+                    "resDate" : "2017-11-25T12:30:58.659Z",
+                    "images" : [
+                    { "id" : "53242515123", "originalName" : "cats.jpeg" }, 
+                    { "id" : "57830483487", "originalName" : "dogs.jpeg" }
+                    ]
+                },
+                {
+                    "price" : "200",
+                    "description" : "LEM",
+                    "resDate" : "2017-11-25T12:30:58.659Z",
+                    "images" : [
+                    { "id" : "53242515123", "originalName" : "cats.jpeg" }, 
+                    { "id" : "57830483487", "originalName" : "dogs.jpeg" }
+                    ]
+                }
+                 ]                    
+                ],
+            }, 
+            {
+                "sellerData" : {
+                    "sellerPhoneNumber" : "01198765432",
+                    "companyName" : "IBM",
+                    "companyAddress" : "Smart Village",
+                    "companyArea" : "Cairo",
+					"companyOnMap" : {
+                        "latitude" : "234343243242424",
+                        "longitude" : "2342342344234234"
+                    }
+                },
+                "price" : "150",
+                "description" : "OEM"
+            }, 
+            {
+                "sellerData" : {
+                    "sellerPhoneNumber" : "01278945612",
+                    "companyName" : "IBM",
+                    "companyAddress" : "Smart Village",
+                    "companyArea" : "Cairo",
+					"companyOnMap" : {
+                        "latitude" : "234343243242424",
+                        "longitude" : "2342342344234234"
+                    }
+                },
+                "price" : "170",
+                "description" : "OEM"
+            }
+        ]
+    
+        },
+        { 
+         "partType" : "spareParts",
+         "part" : "directionWheel",
+         "engineCapacity" : "20",
+         "color" : "blue" ,
+         "responses" : [ 
+            {
+                "sellerData" : {
+                    "sellerPhoneNumber" : "01009560622",
+                    "companyName" : "IBM",
+                    "companyAddress" : "Smart Village",
+                    "companyArea" : "Cairo",
+					"companyOnMap" : {
+                        "latitude" : "234343243242424",
+                        "longitude" : "2342342344234234"
+                    }
+                },
+                "responseData" : [{
+                    "price" : "200",
+                    "description" : "OEM",
+                    "resDate" : "2017-11-25T12:30:58.659Z",
+                    "images" : [
+                    { "id" : "53242515123", "originalName" : "cats.jpeg" }, 
+                    { "id" : "57830483487", "originalName" : "dogs.jpeg" }
+                    ]
+                },
+                {
+                    "price" : "150",
+                    "description" : "FFM",
+                    "resDate" : "2017-11-25T12:30:58.659Z",
+                    "images" : [
+                    { "id" : "53242515123", "originalName" : "cats.jpeg" }, 
+                    { "id" : "57830483487", "originalName" : "dogs.jpeg" }
+                    ]
+                },
+                {
+                    "price" : "200",
+                    "description" : "LEM",
+                    "resDate" : "2017-11-25T12:30:58.659Z",
+                    "images" : [
+                    { "id" : "53242515123", "originalName" : "cats.jpeg" }, 
+                    { "id" : "57830483487", "originalName" : "dogs.jpeg" }
+                    ]
+                }
+                 ]                    
+                ],
+            }, 
+            {
+                "sellerData" : {
+                    "sellerPhoneNumber" : "01198765432",
+                    "companyName" : "IBM",
+                    "companyAddress" : "Smart Village",
+                    "companyArea" : "Cairo",
+					"companyOnMap" : {
+                        "latitude" : "234343243242424",
+                        "longitude" : "2342342344234234"
+                    }
+                },
+                "price" : "150",
+                "description" : "OEM"
+            }, 
+            {
+                "sellerData" : {
+                    "sellerPhoneNumber" : "01278945612",
+                    "companyName" : "IBM",
+                    "companyAddress" : "Smart Village",
+                    "companyOnMap" : {
+                        "latitude" : "234343243242424",
+                        "longitude" : "2342342344234234"
+                    }
+                },
+                "price" : "170",
+                "resDate" : "2017-11-25T12:30:58.659Z",
+                "description" : "OEM"
+            }
+        ]   
+        }, 
+        { 
+         "partType" : "spareParts",
+         "part" : "Motor", 
+         "engineCapacity" : "20",
+         "color" : "red" ,
+          "responses" : [ 
+            {
+                "sellerData" : {
+                    "sellerPhoneNumber" : "01009560622",
+                    "companyName" : "IBM",
+                    "companyAddress" : "Smart Village",
+                    "companyArea" : "Cairo",
+					"companyOnMap" : {
+                        "latitude" : "234343243242424",
+                        "longitude" : "2342342344234234"
+                    }
+                },
+                "responseData" : [{
+                    "price" : "200",
+                    "description" : "OEM",
+                    "resDate" : "2017-11-25T12:30:58.659Z",
+                    "images" : [
+                    { "id" : "53242515123", "originalName" : "cats.jpeg" }, 
+                    { "id" : "57830483487", "originalName" : "dogs.jpeg" }
+                    ]
+                },
+                {
+                    "price" : "150",
+                    "description" : "FFM",
+                    "resDate" : "2017-11-25T12:30:58.659Z",
+                    "images" : [
+                    { "id" : "53242515123", "originalName" : "cats.jpeg" }, 
+                    { "id" : "57830483487", "originalName" : "dogs.jpeg" }
+                    ]
+                },
+                {
+                    "price" : "200",
+                    "description" : "LEM",
+                    "resDate" : "2017-11-25T12:30:58.659Z",
+                    "images" : [
+                    { "id" : "53242515123", "originalName" : "cats.jpeg" }, 
+                    { "id" : "57830483487", "originalName" : "dogs.jpeg" }
+                    ]
+                }
+                 ]                    
+                ],
+            }, 
+            {
+                "sellerData" : {
+                    "sellerPhoneNumber" : "01198765432",
+                    "companyName" : "IBM",
+                    "companyAddress" : "Smart Village",
+					"companyArea" : "Cairo",
+                    "companyOnMap" : {
+                        "latitude" : "234343243242424",
+                        "longitude" : "2342342344234234"
+                    }
+                },
+                "price" : "150",
+                "description" : "OEM"
+            }, 
+            {
+                "sellerData" : {
+                    "sellerPhoneNumber" : "01278945612",
+                    "companyName" : "IBM",
+                    "companyAddress" : "Smart Village",
+					"companyArea" : "Cairo",
+                    "companyOnMap" : {
+                        "latitude" : "234343243242424",
+                        "longitude" : "2342342344234234"
+                    }
+                },
+                "price" : "170",
+                "description" : "OEM"
+            }
+        ]
+    
+    
+        }, 
+        { 
+         "partType" : "spareParts",
+         "part" : "Motor", 
+         "engineCapacity" : "20",
+         "color" : "red" ,
+         "responses" : [ 
+            {
+                "sellerData" : {
+                    "sellerPhoneNumber" : "01009560622",
+                    "companyName" : "IBM",
+                    "companyAddress" : "Smart Village",
+					"companyArea" : "Cairo",
+                    "companyOnMap" : {
+                        "latitude" : "234343243242424",
+                        "longitude" : "2342342344234234"
+                    }
+                },
+                "responseData" : [{
+                    "price" : "200",
+                    "description" : "OEM",
+                    "resDate" : "2017-11-25T12:30:58.659Z",
+                    "images" : [
+                    { "id" : "53242515123", "originalName" : "cats.jpeg" }, 
+                    { "id" : "57830483487", "originalName" : "dogs.jpeg" }
+                    ]
+                },
+                {
+                    "price" : "150",
+                    "description" : "FFM",
+                    "resDate" : "2017-11-25T12:30:58.659Z",
+                    "images" : [
+                    { "id" : "53242515123", "originalName" : "cats.jpeg" }, 
+                    { "id" : "57830483487", "originalName" : "dogs.jpeg" }
+                    ]
+                },
+                {
+                    "price" : "200",
+                    "description" : "LEM",
+                    "resDate" : "2017-11-25T12:30:58.659Z",
+                    "images" : [
+                    { "id" : "53242515123", "originalName" : "cats.jpeg" }, 
+                    { "id" : "57830483487", "originalName" : "dogs.jpeg" }
+                    ]
+                }
+                 ]                    
+                ],
+            }, 
+            {
+                "sellerData" : {
+                    "sellerPhoneNumber" : "01198765432",
+                    "companyName" : "IBM",
+                    "companyAddress" : "Smart Village",
+					"companyArea" : "Cairo",
+                    "companyOnMap" : {
+                        "latitude" : "234343243242424",
+                        "longitude" : "2342342344234234"
+                    }
+                },
+                "price" : "150",
+                "description" : "OEM"
+            }, 
+            {
+                "sellerData" : {
+                    "sellerPhoneNumber" : "01278945612",
+                    "companyName" : "IBM",
+                    "companyAddress" : "Smart Village",
+					"companyArea" : "Cairo",
+                    "companyOnMap" : {
+                        "latitude" : "234343243242424",
+                        "longitude" : "2342342344234234"
+                    }
+                },
+                "price" : "170",
+                "description" : "OEM"
+            }
+        ]
+    
+     ],
+	 "Date" : "2017-11-14T22:37:45.165Z",
+}
