@@ -255,14 +255,16 @@ function updateModelSelect()
     for(var i = 0; i < carModelsNames.length; i++)
     {
       //Get previous added cars for this car brand
-      if(selectedCars[selectedType]){
-        if(selectedCars[selectedType][carModelsNames[i]])
-          str += '<option value="' + carModelsNames[i] + '" selected>' + carModelsNames[i] + '</option>';
-        else
+      if(typeof selectedCars != "undefined")
+      {
+        if(typeof selectedCars[selectedType] != "undefined")
+          if(selectedCars[selectedType].indexOf(carModelsNames[i]) >= 0)
+            str += '<option value="' + carModelsNames[i] + '" selected>' + carModelsNames[i] + '</option>';
+          else
+            str += '<option value="' + carModelsNames[i] + '">' + carModelsNames[i] + '</option>';
+        }else{
           str += '<option value="' + carModelsNames[i] + '">' + carModelsNames[i] + '</option>';
-      }else{
-        str += '<option value="' + carModelsNames[i] + '">' + carModelsNames[i] + '</option>';
-      }
+        }
     }
     $("#car-model").append(str);
     $('#car-model').selectpicker('refresh');
@@ -281,9 +283,15 @@ function updateYearSelect()
     var str = "";
     var startYear =  (new Date()).getFullYear() + 1;
     for(var i = startYear; i > 1949; i--){
-      if(selectedCars[selectedType] && selectedCars[selectedType][selectedModel]){
-        if(selectedCars[selectedType][selectedModel].indexOf(String(i)) > -1)
-          str += '<option value="' + i + '" selected>' + i + '</option>';
+      if(typeof selectedCars != "undefined")
+      {
+        if(typeof selectedCars[selectedType] != "undefined" && typeof selectedCars[selectedType][selectedModel] != "undefined")
+        {
+          if(selectedCars[selectedType][selectedModel].indexOf(String(i)) > -1)
+            str += '<option value="' + i + '" selected>' + i + '</option>';
+          else
+            str += '<option value="' + i + '">' + i + '</option>';
+        }
         else
           str += '<option value="' + i + '">' + i + '</option>';
       }
