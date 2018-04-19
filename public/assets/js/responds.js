@@ -23,8 +23,17 @@ async function parts(type){
     if(type == 'accessories' || type == 'spareParts'){
       var responses = Object.keys(responds[keys[i]]);
       itemDivClone.find('.info').text(responses.length + ' responses');
+      str = '#';
       if(responds[keys[i]][0]['photosURL'] != undefined ){
         var url = responds[keys[i]][0]['photosURL'][0];
+        str = url;
+        if( url.indexOf('https') == -1 )
+        {
+          await firebase.storage().ref().child(url).getDownloadURL().then( url =>{
+            str = url;
+          }).catch(function(error) { console.log(error);});
+        }
+      }
     }
     else if(request['orderPartType'] == "batteries"){
       str = 'assets/images/requests/battery.jpg';
@@ -35,7 +44,7 @@ async function parts(type){
       str = 'assets/images/requests/tyre.jpg';
       itemDivClone.find('.info').text(responds[keys[i]]['description']);
     }
-    itemDivClone.find('.bg-img').css('background-image','url('+url+')');
+    itemDivClone.find('.bg-img').css('background-image','url('+str+')');
     itemDivClone.find('.buyer-phone').text(keys[i]);
     itemDivClone.show();
     $(".equalize").append(itemDivClone);

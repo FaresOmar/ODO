@@ -310,5 +310,11 @@
 <script src="assets/js/equalize.min.js"></script>
 <script src="assets/js/plugins.js?v=1.0.0"></script>
 <script src="assets/js/functions.js?v=1.2.0"></script>
+<script>
+$.get( "header.html", function( data ) {
+  $( "#navbar-spy" ).html( data );
+	adjustHeader();
+});
+</script>
 </body>
 </html>

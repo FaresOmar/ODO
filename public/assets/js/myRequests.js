@@ -30,20 +30,29 @@ var href = 'responds.html';
 
 
 
-function parts(type){
+async function parts(type){
   if(type == "spareParts" )
     var partType = 'partsDescription';
   else if(type == "accessories")
     var partType = 'accessoriesDescription';
   for(let i=0; i < keys.length; i++){
     if(requests[keys[i]]['orderPartType'] == type){
+      str = '#';
       if(requests[keys[i]][partType][0]['photosURL'] != undefined){
         var url = requests[keys[i]][partType][0]['photosURL'][0];
+        str = url;
+        if( url.indexOf('https') == -1 )
+        {
+          await firebase.storage().ref().child(url).getDownloadURL().then( url =>{
+            str = url;
+          }).catch(function(error) { console.log(error);});
+        }
       var itemDiv = $('.product-item:first');
       var itemDivClone = itemDiv.clone();
-      itemDivClone.find('.bg-img').css('background-image','url('+url+')');
+      itemDivClone.find('.bg-img').css('background-image','url('+str+')');
       itemCommonData(itemDivClone,i,href);
       $(".equalize").append(itemDivClone);
+    }
     }
   }
   viewResponds();
