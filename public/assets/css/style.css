@@ -996,7 +996,7 @@ section {
 }
 
 .bg-overlay-dark:before {
-	background-color: rgba(47, 47, 47, 0.95);
+	background-color: rgba(47, 47, 47, 0.35);
 }
 .bg-overlay-dark2:before {
 	background-color: rgba(47, 47, 47, 0.45);
@@ -10239,7 +10239,7 @@ input[type=checkbox] {
 	height: 15px;
 	background: #333;
 	margin: 20px 0px;
-
+	border: 1px solid rgba(255,255,255,0.7);
 	border-radius: 50px;
 	position: relative;
 }
@@ -10278,7 +10278,7 @@ input[type=checkbox] {
 	transition: all .5s ease;
 	cursor: pointer;
 	position: absolute;
-	top: 1px;
+	top: 0px;
 	z-index: 1;
 	left: 1px;
 	background: #ddd;
@@ -10314,6 +10314,65 @@ input[type=checkbox] {
 .contact-div {
 	display: none;
 }
+
+
+
+.MultiFile-title {
+	display: none;
+}
+.MultiFile-label {
+	padding: 10px;
+}
+.MultiFile-remove {
+	display: none;
+	font-size: 20px;
+    margin-right: 10px;
+}
+
+
+.checkbox-div {
+	/*border: 1px solid #fff;*/
+	margin-bottom: 30px;
+	border-radius: 20px;
+}
+.checkbox-div div {
+	margin-left: 20px;
+}
+
+
+
+.benefits_section {
+	margin-bottom: 50px;
+
+}
+.benefits_section .feature .content-feature p{
+	color: #fff;
+}
+.benefits_section .feature .feature-icon {
+		-webkit-transition: all 0.3s ease;
+		-moz-transition: all 0.3s ease;
+		-ms-transition: all 0.3s ease;
+		-o-transition: all 0.3s ease;
+		transition: all 0.3s ease; 	
+}
+.benefits_section .feature .feature-icon img {
+	width: 75px;
+	height: auto;
+}
+.benefits_section .feature .feature-icon:not(:hover){
+		-webkit-filter: grayscale(100%);
+		-moz-filter: grayscale(100%);
+		-o-filter: grayscale(100%);
+		-ms-filter: grayscale(100%);
+		filter: grayscale(100%); 
+		-webkit-transition: all 0.3s ease;
+		-moz-transition: all 0.3s ease;
+		-ms-transition: all 0.3s ease;
+		-o-transition: all 0.3s ease;
+		transition: all 0.3s ease;    
+}
+
+
 
 
 
