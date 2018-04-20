@@ -10313,6 +10313,15 @@ input[type=checkbox] {
 
 .contact-div {
 	display: none;
+	position: absolute;
+	left: 50%;
+    bottom: 0;
+    text-align: center;
+    transform: translateX(-50%);
+    -webkit-transform: translateX(-50%);
+    -moz-transform: translateX(-50%);
+    -o-transform: translateX(-50%);
+    -ms-transform: translateX(-50%);
 }
 
 
@@ -10481,6 +10490,21 @@ div.tree-multiselect>div.selected, div.tree-multiselect>div.selections {
 .respond-to-request-section .product-item .product-img .images_item_carousel {
 	z-index: -1;
 }
+.white-section h2 {
+	padding-bottom: 10px;
+}
+.white-section h3 {
+	margin-bottom: 10px;
+}
+.white-section p {
+	color: #fff;
+}
+
+
+
+
+
+
 
 
 
