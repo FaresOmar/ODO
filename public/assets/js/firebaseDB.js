@@ -345,7 +345,9 @@ function uploadPhotos(i){
     let file = input.files[j];
     let fileExtension = getFileExtension(file.name);
     let url = 'Orders/' + key +'/'+i+'/'+j+'.'+fileExtension;
-    firebase.storage().ref(url).put(file);
+    firebase.storage().ref(url).put(file).then(function(snapshot) {
+  console.log('Uploaded a blob or file!');
+});
     urls.push(url);
   }
   return 1;
