@@ -4,7 +4,7 @@ $(document).ready(function() {
   registerSellerEvents();
   signinEvent();
   updateAreas();
-//  updateCars();
+  //updateCars();
   updateBrandModel();
   addCar();
   toggleSelectCar();

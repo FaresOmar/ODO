@@ -33,7 +33,7 @@ var workingOn = JSON.parse(localStorage.getItem("workingOn"));
 
 
 
-function parts(type){
+async function parts(type){
   if(type == "spareParts" )
   {
     var partType = 'partsDescription';
@@ -52,21 +52,29 @@ function parts(type){
         let carType = requests[keys[i]]['carDetails']['carType'];
         if(checkCar(carModel,carType)){
           //
+          str = '#';
           if(requests[keys[i]][partType][j]['photosURL'] != undefined){
             var url = requests[keys[i]][partType][j]['photosURL'][0];
+            str = url;
+            if( url.indexOf('https') == -1 )
+            {
+              await firebase.storage().ref().child(url).getDownloadURL().then( url =>{
+                str = url;
+              }).catch(function(error) { });
+            }
           }
           var itemDiv = $('.product-item:first');
           var itemDivClone = itemDiv.clone();
-          itemDivClone.find('.bg-img').css('background-image','url('+url+')');
+          itemDivClone.find('.bg-img').css('background-image','url('+str+')');
           itemCommonData(itemDivClone,i,href);
           itemDivClone.find('.respond-button').attr('itemNumber',j);
           itemDivClone.find('.product-description').text(requests[keys[i]][partType][j]['part']);
           itemDivClone.show();
           $(".equalize").append(itemDivClone);
         }
+        }
       }
     }
-  }
   assignRespond();
 }
 
