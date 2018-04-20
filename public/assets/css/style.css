@@ -10373,14 +10373,62 @@ input[type=checkbox] {
 }
 
 
+div.tree-multiselect div.title {
+	background: #000 !important;
+	color: #ffc527 !important;
+	font-weight: 400;
+}
+div.tree-multiselect>div.selections div.item label {
+	font-weight: 400 !important;
+}
 
+div.tree-multiselect>div.selected>div.item {
+	background: #000 !important;
+	color: #ffc527 !important;
+}
+div.tree-multiselect span.remove-selected, div.tree-multiselect span.description {
+	background: #000 !important;
+	color: #ffc527 !important;
+	border:1px solid #fff;	
+}
+.select-all-container {
+	margin: 10px;
+}
+div.tree-multiselect .auxiliary .select-all-container span.select-all, div.tree-multiselect .auxiliary .select-all-container span.unselect-all {
+	padding-right: 15px !important;
+	padding-left: 15px !important;
+}
 
+div.tree-multiselect .auxiliary .select-all-container span.select-all, div.tree-multiselect .auxiliary .select-all-container span.unselect-all {
+	display: inline-block;
+	border-radius: 13px;
+    background-color: #000;
+    border:none !important;
+    color: #ffc527;
+    margin: 10px auto;
+    padding: 10px;
+    width: auto;
+    -webkit-transition: all 300ms ease;
+    -moz-transition: all 300ms ease;
+    -o-transition: all 300ms ease;
+    transition: all 300ms ease;	
+}
+div.tree-multiselect .auxiliary .select-all-container span.select-all:hover , div.tree-multiselect .auxiliary .select-all-container span.unselect-all:hover {
+    background-color: #ffc527;
+    color: #000;
+    -webkit-transition: all 300ms ease;
+    -moz-transition: all 300ms ease;
+    -o-transition: all 300ms ease;
+    transition: all 300ms ease;	
+}
 
+div.tree-multiselect {
+	margin-bottom: 50px;
+}
 
-
-
-
-
+div.tree-multiselect>div.selected, div.tree-multiselect>div.selections {
+	max-height: 300px;
+}
 
 
 
