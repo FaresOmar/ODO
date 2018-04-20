@@ -305,6 +305,7 @@ $(document).ready(function() {
     var $heroSlider = $("#hero-slider"),
         $projectCarousel = $("#project-carousel"),
         $testimonialCarousel = $(".testimonial-carousel"),
+        $images_item = $(".images_item_carousel"),
         $testimonialSlide = $(".testimonial-slide");
     $heroSlider.owlCarousel({
         animateOut: "fadeOutLeft",
@@ -357,6 +358,27 @@ $(document).ready(function() {
             }
         }
     });
+    $images_item.owlCarousel({
+        loop: false,
+        margin: 22,
+        nav: false,
+        dots: false,
+        dotsSpeed: 300,
+        loop:true,
+        autoplay: true,
+        items: 1,
+        responsive: {
+            0: {
+                items: 1
+            },
+            600: {
+                items: 1
+            },
+            1000: {
+                items: 1
+            }
+        }
+    });    
     $testimonialSlide.owlCarousel({
         loop: false,
         margin: 22,

@@ -184,7 +184,7 @@
 					<div class="col-xs-12 col-sm-12 col-md-4">
 						<div class="heading heading-4">
 							<div class="heading-bg heading-right">
-								<p class="mb-0">your home of cars</p>
+								
 								<h2>login</h2>
 							</div>
 						</div>
@@ -212,7 +212,7 @@
 					<div class="col-xs-12 col-sm-12 col-md-6 col-md-offset-2">
 						<div class="heading heading-4">
 							<div class="heading-bg heading-right">
-								<p class="mb-0">your home of cars</p>
+								
 								<h2>Register</h2>
 							</div>
 						</div>
@@ -286,10 +286,16 @@
 									<input type="email" class="form-control mb-30" name="new-email" id="n_email" placeholder="Your Email"/>
 								</div>
 								<div class="col-md-6">
+									<input type="password" class="form-control mb-30" name="pw-new" id="password_new" placeholder="Password *" required/>
+								</div>
+								<div class="col-md-6">
+									<input type="password" class="form-control mb-30" name="pw-repeat-new" id="password-repeat-seller" placeholder="Re-enter password *" required/>
+								</div>
+								<div class="col-md-6">
 									<input type="text" class="form-control mb-30" name="last-name" id="com_name" placeholder="Company Name *" required/>
 								</div>
 								<div class="col-md-6">
-									<input type="text" class="form-control mb-30" name="last-name" id="com_add" placeholder="Company Address *" required/>
+									<input type="text" class="form-control mb-30" name="last-name" id="com_add" placeholder="Company Address * (ex: 12 tahrir st. ...)" required/>
 								</div>
 
 								<div class="col-md-6">
@@ -370,12 +376,7 @@
 							</div>
 
 
-								<div class="col-md-6">
-									<input type="password" class="form-control mb-30" name="pw-new" id="password_new" placeholder="Password *" required/>
-								</div>
-								<div class="col-md-6">
-									<input type="password" class="form-control mb-30" name="pw-repeat-new" id="password-repeat-seller" placeholder="Re-enter password *" required/>
-								</div>
+								
 								<div class="col-md-12">
 									<button type="submit" id="register-seller-button" class="btn btn-primary btn-black btn-block full">Register an account</button>
 								</div>
@@ -497,7 +498,7 @@
 
 <script>
 
-var tree1 = $("#test-select").treeMultiselect({ enableSelectAll: true, sortable: true });
+var tree1 = $("#test-select").treeMultiselect({ enableSelectAll: true, sortable: true});
 
 $("#select1").change(function() {
   if ($(this).data('options') == undefined) {
