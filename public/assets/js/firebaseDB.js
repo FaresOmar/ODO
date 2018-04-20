@@ -258,13 +258,17 @@ function updateModelSelect()
       if(typeof selectedCars != "undefined")
       {
         if(typeof selectedCars[selectedType] != "undefined")
+        {
           if(selectedCars[selectedType].indexOf(carModelsNames[i]) >= 0)
             str += '<option value="' + carModelsNames[i] + '" selected>' + carModelsNames[i] + '</option>';
           else
             str += '<option value="' + carModelsNames[i] + '">' + carModelsNames[i] + '</option>';
-        }else{
+        }
+        else
+        {
           str += '<option value="' + carModelsNames[i] + '">' + carModelsNames[i] + '</option>';
         }
+      }
     }
     $("#car-model").append(str);
     $('#car-model').selectpicker('refresh');
