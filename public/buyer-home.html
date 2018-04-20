@@ -68,7 +68,7 @@
 ============================================= -->
 <section class=" bg-overlay bg-overlay-gradient pb-0">
 	<div class="bg-section" >
-		<img src="assets/images/bmw_3-wallpaper-960x540.jpg" alt="Background"/>
+		<img src="assets/images/website_assets/Make_a_request.jpg" alt="Background"/>
 	</div>
 	<div class="container">
 		<div class="row">
@@ -156,14 +156,13 @@
 											<p class="mb-30">Adding part details</p>
 										</div> -->
 										<div id="spare-part-single1">
-											<div class="col-md-6">
+											<div class="col-md-12">
 
-												<img id="preview-img" class="preview-img"  />
-												<input type='file' id="imgInp1" class="hidden" multiple accept="image/x-png,image/gif,image/jpeg"/>
-												<label class="btn btn-secondary file-upload col-md-12" for="imgInp1">Add Photos <i class="fa fa-plus"></i></label>
+												<input type='file' id="imgInp" class="hidden multi with-preview" accept="gif|jpg|png" multiple>
+												<label class="btn btn-secondary file-upload col-md-12" for="imgInp">Add Photos <i class="fa fa-plus"></i></label>
 
 											</div>
-											<div class="col-md-6">
+											<div class="col-md-12">
 												<input type="text" class="form-control mb-30" name="part" id="part" placeholder="Part  (ex: Break bad)" required/>
 											</div>
 										</div>
@@ -244,15 +243,14 @@
 											<p class="mb-30">Adding accessory part details</p>
 										</div> -->
 										<div id="accessory-part-single1">
-											<div class="col-md-6 mb-30">
+											<div class="col-md-12 mb-30">
 
-												<img id="preview-img_access" class="preview-img" />
-												<input type='file' id="imgInp_access1" class="hidden" multiple accept="image/x-png,image/gif,image/jpeg"/>
-												<label class="btn btn-secondary file-upload col-md-12" for="imgInp_access1">Add Photos <i class="fa fa-plus"></i></label>
+												<input type='file' id="imgInp_access" class="hidden multi with-preview" accept="gif|jpg|png" multiple>
+												<label class="btn btn-secondary file-upload col-md-12" for="imgInp_access">Add Photos <i class="fa fa-plus"></i></label>
 
 											</div>
 
-											<div class="col-md-6">
+											<div class="col-md-12">
 												<input type="text" class="form-control mb-30" name="part-item" id="part-item" placeholder="Part" required/>
 											</div>
 										</div>
@@ -347,6 +345,7 @@
 <!-- Footer Scripts
 ============================================= -->
 <script src="assets/js/jquery-2.1.1.min.js"></script>
+<script src="https://rawgit.com/fyneworks/multifile/2.1.0-preview/jquery.MultiFile.js"></script>
 <script src="assets/js/plugins.js?v=1.0.0"></script>
 <script src="assets/js/functions.js?v=1.2.0"></script>
 <script type="text/javascript" src="https://maps.google.com/maps/api/js?sensor=true"></script>
