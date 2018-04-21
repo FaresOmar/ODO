@@ -1,3 +1,21 @@
+$(window).unload(function() {
+  if(photoUploading)
+  {
+    if(confirm("Photo(s) are uploading, are you sure you want to leave the page?"))
+    {
+  
+    }
+  }
+
+
+});
+
+window.onbeforeunload = function() { 
+  if (photoUploading) {
+    return 'Photo(s) are uploading, if you leave the page now they might be lost.';
+  }
+}
+
 function adjustHeader(){
   if(localStorage.getItem("userType") == "buyer"){
     $('#buyer-home').css('display','');
@@ -259,15 +277,17 @@ function updateModelSelect()
       {
         if(typeof selectedCars[selectedType] != "undefined")
         {
-          if(selectedCars[selectedType].indexOf(carModelsNames[i]) >= 0)
+          if(Object.keys(selectedCars[selectedType]).indexOf(carModelsNames[i]) >= 0)
             str += '<option value="' + carModelsNames[i] + '" selected>' + carModelsNames[i] + '</option>';
-          else
-            str += '<option value="' + carModelsNames[i] + '">' + carModelsNames[i] + '</option>';
         }
         else
         {
           str += '<option value="' + carModelsNames[i] + '">' + carModelsNames[i] + '</option>';
         }
+      }
+      else
+      {
+        str += '<option value="' + carModelsNames[i] + '">' + carModelsNames[i] + '</option>';
       }
     }
     $("#car-model").append(str);
@@ -349,7 +369,9 @@ function uploadPhotos(i){
     let file = input.files[j];
     let fileExtension = getFileExtension(file.name);
     let url = 'Orders/' + key +'/'+i+'/'+j+'.'+fileExtension;
+    photoUploading = true;
     firebase.storage().ref(url).put(file).then(function(snapshot) {
+      photoUploading = false;
   console.log('Uploaded a blob or file!');
 });
     urls.push(url);

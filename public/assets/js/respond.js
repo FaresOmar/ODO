@@ -119,7 +119,9 @@ function uploadPhotos(){
     let file = input.files[j];
     let fileExtension = getFileExtension(file.name);
     let url = 'Responds/' + requestID +'/'+sellerPhoneNumber+'/'+j+'.'+fileExtension;
+    photoUploading = true;
     firebase.storage().ref(url).put(file).then(function(snapshot) {
+      photoUploading = false;
   console.log('Uploaded a blob or file!');
 });
     urls.push(url);
